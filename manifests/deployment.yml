@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cloudorbit21 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudorbit21
+  template:
+    metadata:
+      labels:
+        app: cloudorbit21 
+    spec:
+      containers:
+        - name: cloudorbit21 
+          image: cloudorbit.azurecr.io/cloudorbit21
+          ports:
+          - containerPort: 443
