@@ -1,5 +1,4 @@
 Cocktail making business
-
 By dftopcat
 
-See site https://tradexy.github.io/bushmaster/
+https://tradexy.github.io/bushmaster/
