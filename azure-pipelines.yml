@@ -6,26 +6,26 @@ stages:
       vmImage: 'Ubuntu-18.04'
     continueOnError: true
     steps:
-    - script: echo "hello to my first script test Build"
+    - script: echo "hello to my first script test Build ubuntu 18.04"
 - stage: dev_deploy
   jobs:
   - deployment: dev_deploy
     pool:
-      vmImage: 'Ubuntu-18.04'
+      vmImage: 'Ubuntu-20.04'
     environment: 'dev-hello'
     strategy:
       runOnce:
         deploy:
           steps:
-          - script: echo "hello, dev deploy world !!!"
+          - script: echo "hello, dev deploy world with ubuntu 20.04!!!"
 - stage: qa_deploy
   jobs:
   - deployment: qa_deploy
     pool:
-      vmImage: 'Ubuntu-18.04'
+      vmImage: 'Ubuntu-latest'
     environment: 'qa-hello'
     strategy:
       runOnce:
         deploy:
           steps:
-          - script: echo "hello, qa deploy world !!!"
+          - script: echo "hello, qa deploy world using ubuntu latest!!!"
