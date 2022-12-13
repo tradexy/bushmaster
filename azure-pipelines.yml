@@ -24,10 +24,10 @@ stages:
   jobs:
   - deployment: qa_deploy
     pool:
-      vmImage: 'Ubuntu-latest'
+      vmImage: 'Ubuntu-22.04'
     environment: 'qa-hello'
     strategy:
       runOnce:
         deploy:
           steps:
-          - script: echo "hello, qa deploy world using ubuntu latest!!!"
+          - script: echo "hello, qa deploy world using ubuntu 22.04!!!"
