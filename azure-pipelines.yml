@@ -6,7 +6,7 @@ stages:
   - job: Build
     pool:
       vmImage: 'Ubuntu-20.04'
-    continueOnError: true
+    continueOnError: false
     steps:
     - script: echo "hello to my first script test Build ubuntu 20.04"
 - stage: dev_deploy
